@@ -8,7 +8,7 @@
 8. when we run any file by running node command like 
     node server.js "Hello Node"
     we can also pass argv which we can access in "process.argv"
-    ![alt text](<Screenshot 2025-12-15 at 9.15.31 PM.png>)
+    ![alt text](<assets/Screenshot 2025-12-15 at 9.15.31 PM.png>)
 
     8.1 first argument is node install path
     8.2 File path runing
@@ -26,7 +26,7 @@
 
 15. In node js github repo which is open source "/src" folder contain binding functionality to libuv where "/lib" contains functions written in js for async operations 
 
-![alt text](<Screenshot 2025-12-16 at 11.36.56 AM.png>)
+![alt text](<assets/Screenshot 2025-12-16 at 11.36.56 AM.png>)
 -------------------------------------------------------
 
 Thread pool
@@ -40,11 +40,11 @@ console.log("Time taken in miliseconds", new Date() - start)
 console.log("end sync");
 
 this will block other synchronosu task
-![alt text](<Screenshot 2025-12-16 at 5.20.23 PM.png>)
+![alt text](<assets/Screenshot 2025-12-16 at 5.20.23 PM.png>)
 
 
 2.  synchronous task are executed first console logs are synchronous here , crypto hashing is async task will go to thread pool, each task assigned to diffrent thread they excuted seperately
-![alt text](<Screenshot 2025-12-16 at 5.20.33 PM.png>)
+![alt text](<assets/Screenshot 2025-12-16 at 5.20.33 PM.png>)
 
 console.log("start async");
 crypto.pbkdf2("Nizam1234", "salt", 10000, 512, "sha512", () => {
@@ -58,12 +58,12 @@ console.log("end async");
 
 thread pool size by default thread pool has 4 threads as we can see 5th task takes twice of average each task, so means after one of 4 thread get free then 5 th task is get inti thread
 
-![alt text](<Screenshot 2025-12-16 at 5.26.05 PM.png>)
+![alt text](<assets/Screenshot 2025-12-16 at 5.26.05 PM.png>)
 
 4. we can increase thread pool size using process.env.UV_THREADPOOL_SIZE = 5
 after this each task taking same time
 
-![alt text](<Screenshot 2025-12-16 at 5.30.03 PM.png>)
+![alt text](<assets/Screenshot 2025-12-16 at 5.30.03 PM.png>)
 
 5. We can increase thread pool size but limited to number of cpu cores in system
 
