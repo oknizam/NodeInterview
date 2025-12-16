@@ -17,3 +17,13 @@
 10. History, location, navigation these are browser specific apis
 
 11. Node has access dirname, filename, require -> es5 import -> es6
+
+12. Nodejs runs only synchronous code , rest of code like file read, file open , file write, http request, crypto operations , path resolve all are like asyncronous IO operations are handled by libuv
+
+13. These asynchronous operations are send to libuv with callback when response comes back handled by callstack
+
+14. Libuv is written in C launguage, so when we trigger js function like any async operations send to libuv with nodejs bindings which is written in C++ laungauges which helps in connecting JS to C launguage function
+
+15. In node js github repo which is open source "/src" folder contain binding functionality to libuv where "/lib" contains functions written in js for async operations 
+
+![alt text](<Screenshot 2025-12-16 at 11.36.56 AM.png>)
