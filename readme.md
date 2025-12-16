@@ -40,10 +40,11 @@ console.log("Time taken in miliseconds", new Date() - start)
 console.log("end sync");
 
 this will block other synchronosu task
+![alt text](<Screenshot 2025-12-16 at 5.20.23 PM.png>)
 
 
 2.  synchronous task are executed first console logs are synchronous here , crypto hashing is async task will go to thread pool, each task assigned to diffrent thread they excuted seperately
-
+![alt text](<Screenshot 2025-12-16 at 5.20.33 PM.png>)
 
 console.log("start async");
 crypto.pbkdf2("Nizam1234", "salt", 10000, 512, "sha512", () => {
