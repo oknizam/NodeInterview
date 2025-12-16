@@ -52,3 +52,19 @@ crypto.pbkdf2("Nizam1234", "salt", 10000, 512, "sha512", () => {
   });
 
 console.log("end async");
+
+
+3. Thread pool size 
+
+thread pool size by default thread pool has 4 threads as we can see 5th task takes twice of average each task, so means after one of 4 thread get free then 5 th task is get inti thread
+
+![alt text](<Screenshot 2025-12-16 at 5.26.05 PM.png>)
+
+4. we can increase thread pool size using process.env.UV_THREADPOOL_SIZE = 5
+after this each task taking same time
+
+![alt text](<Screenshot 2025-12-16 at 5.30.03 PM.png>)
+
+5. We can increase thread pool size but limited to number of cpu cores in system
+
+
