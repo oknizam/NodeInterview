@@ -37,3 +37,18 @@ In simple way after every queue , micro task queue will come check process nexti
 <!-- important -->
 
 If timer callback and I/O call back ready at same time , timer get priority
+
+
+console.log("start")
+--------------------------------------------------
+------------                  -----------
+heap memory                    Call stack
+------------                  ------------
+memory will                    
+allocate
+                              console.log("start")
+                               global()
+------------                  --------------
+--------------------------------------------------
+
+after execution conosle.log("start") will be removed, then after everyting done global() also get removed from call stack
