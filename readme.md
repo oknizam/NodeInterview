@@ -68,3 +68,11 @@ after this each task taking same time
 5. We can increase thread pool size but limited to number of cpu cores in system
 
 
+6. Network I/O request
+
+    Network request will not handle by thread in threadpool of libuv, it will handled directly by OS kernel, libuv regsiter this with socket OS observe to complete when it get complete OS will notify libuv , libuv then push this callback to eventloop, from there callstack execute this in main thread
+
+    MAC OS uses kqueue to check task is completed
+    In simple way it will listning to events of complition
+    
+    kqueue is an OS mechanism that lets applications register interest in events like socket reads, and the OS notifies them only when something happens, avoiding CPU-wasting polling.
