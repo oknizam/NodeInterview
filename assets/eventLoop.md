@@ -55,3 +55,6 @@ after execution conosle.log("start") will be removed, then after everyting done 
 
 
 ![alt text](<Screenshot 2025-12-16 at 8.22.02 PM.png>)
+
+
+10. [NOTE] IO events are polled we call it as IO POLLING -> second iteration we will not get CB() -> we have to poll to get the io operation is completed if yes we will get CB() from libuv thread pool
