@@ -52,3 +52,6 @@ allocate
 --------------------------------------------------
 
 after execution conosle.log("start") will be removed, then after everyting done global() also get removed from call stack
+
+
+![alt text](<Screenshot 2025-12-16 at 8.22.02 PM.png>)
