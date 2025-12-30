@@ -314,6 +314,10 @@ console.log('5');
 
 //output:  1, 5, 3, 4, 2
 
+// 1. new Promise willbe executed immeditely because it is synchronous
+// 2. async function will execute syncronousely until it get await 
+// 3. when it get await eventloop move to promise queue if promise , start execute next sync execution 
+
 
 
 
