@@ -38,6 +38,8 @@ In simple way after every queue , micro task queue will come check process nexti
 
 If timer callback and I/O call back ready at same time , timer get priority
 
+1. callstack stores -> functions, local variables (premitives), execution context
+2. heap memory -> objects, function as object, array , closures and dom refrences
 
 console.log("start")
 --------------------------------------------------
