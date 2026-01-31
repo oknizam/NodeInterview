@@ -79,3 +79,11 @@ after this each task taking same time
 
 
   astexplorer  -> website to check javscript code abtract class
+
+
+  # nodejs
+
+  To run javscript outside browser we will use nodejs , which uses v8 engine outside browser includes thread pool, node apis fs , http , crypto etc
+
+  1. express js  -> runs on nodejs
+  2. react and angular -> uses nodejs to build application, but they run on browser
